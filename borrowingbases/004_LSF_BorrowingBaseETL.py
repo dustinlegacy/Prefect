@@ -14,6 +14,8 @@ import os
 import platform
 import socket
 import sqlite3
+from prefect.filesystems import GitHub
+from prefect.github.repository import GitHubRepository
 
 
 pd.set_option('display.max_rows', None)
