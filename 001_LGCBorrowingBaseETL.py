@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[46]:
-
-
 from prefect import flow, task
 import time
 import pandas as pd
@@ -17,16 +11,16 @@ import os
 import platform
 import socket
 import sqlite3
+from prefect_github.repository import GitHubRepository
 
+github_repository_block = GitHubRepository.load("githubblocki")
 
-# In[47]:
 
 
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
 
-# In[48]:
 
 
 @task
@@ -143,28 +137,3 @@ def etl_lgc():
     
 if __name__ == "__main__":
                 etl_lgc()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
