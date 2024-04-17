@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[46]:
-
-
 from prefect import flow, task
 import time
 import pandas as pd
